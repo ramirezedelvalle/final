@@ -3,9 +3,9 @@ require_once '../../modelos/puestos.php';
 require '../../modelos/empleados.php';
 require_once '../../modelos/areas.php';
     try {
-        $empleado = new Empleado($_GET);
-        $puesto = new Puesto();
-        $area = new Area();
+        $empleado = new empleados($_GET);
+        $puesto = new puestos();
+        $area = new areas();
         $empleados = $empleado->buscar();
         $puestos = $puesto->buscar();
         $areas = $area->buscar();

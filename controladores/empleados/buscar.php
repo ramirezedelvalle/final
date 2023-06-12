@@ -1,12 +1,17 @@
 <?php include_once '../../includes/header.php'?>
 <?php include_once '../../includes/navbar.php'?>
+
 <?php
 require '../../modelos/empleados.php';
 try {
     $empleados = new empleados($_GET);
     
     $empleados = $empleados->buscar();
-
+    // echo "<pre>";
+    // var_dump($empleados);
+    // echo "</pre>";
+    // exit;
+    // $error = "NO se guardó correctamente";
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2){

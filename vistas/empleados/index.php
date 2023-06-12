@@ -3,10 +3,10 @@ require_once '../../modelos/puestos.php';
 require_once '../../modelos/areas.php';
 
 try {
-    $areas = new areas();
-    $areas = $areas->buscar();
-    $puestos = new puestos();
-    $puestos = $puestos->buscar();
+    $area = new areas();
+    $areas = $area->buscar();
+    $puesto = new puestos();
+    $puestos = $puesto->buscar();
 } catch (PDOException $e) {
     $error = $e->getMessage();
 } catch (Exception $e2) {
