@@ -115,8 +115,7 @@ class empleados extends Conexion{
     }
 
     public function modificar(){
-        $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_ape = '$this->emp_ape', emp_dpi = $this->emp_dpi, emp_edad = $this->emp_edad, emp_puesto_cod = $this->emp_puesto_cod, emp_sexo = $this->emp_sexo, emp_area_cod = $this->emp_area_cod  where emp_cod = $this->emp_cod";
-        
+        $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_ape = '$this->emp_ape', emp_dpi = '$this->emp_dpi', emp_edad = $this->emp_edad, emp_puesto_cod = $this->emp_puesto_cod, emp_sexo = '$this->emp_sexo', emp_area_cod = $this->emp_area_cod WHERE emp_cod = $this->emp_cod";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
