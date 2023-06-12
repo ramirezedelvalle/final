@@ -24,13 +24,15 @@ CREATE TABLE sexo  (
 CREATE TABLE puestos  ( 
 	pue_cod	SERIAL NOT NULL,
 	pue_descr	VARCHAR(200) NOT NULL,
-    pue_suel DECIMAL(8,2)
+    pue_suel DECIMAL(8,2),
+    pue_situacion CHAR (1) DEFAULT '1',
     PRIMARY KEY(pue_cod)
 )
 
 CREATE TABLE areas  ( 
 	area_cod	SERIAL NOT NULL,
 	area_nom	VARCHAR(200) NOT NULL,
+    area_situacion CHAR (1) DEFAULT '1',
     PRIMARY KEY(area_cod)
 )
 
