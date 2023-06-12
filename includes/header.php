@@ -21,6 +21,15 @@
   font-size: 60px;
   transition-duration: 5s;
 }
+
+table{
+        background-color: white;
+    }
+
+    .container{
+        padding: 5rem;
+        padding-top: 5rem;
+    }
     </style>
     <title>Oficina de Control Administrativo</title>
 </head>
