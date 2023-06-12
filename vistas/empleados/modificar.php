@@ -1,9 +1,15 @@
 <?php
+require_once '../../modelos/puestos.php';
 require '../../modelos/empleados.php';
+require_once '../../modelos/areas.php';
     try {
-        $empleados = new empleados($_GET);
+        $empleado = new Empleado($_GET);
+        $puesto = new Puesto();
+        $area = new Area();
+        $empleados = $empleado->buscar();
+        $puestos = $puesto->buscar();
+        $areas = $area->buscar();
 
-        $empleados = $empleados->buscar();
         // echo "<pre>";
         // var_dump($empleados[0]['EMP_COD']);
         // echo "</pre>";
@@ -48,19 +54,32 @@ require '../../modelos/empleados.php';
                 <div class="row mb-3">
                     <div class="col">
                         <label for="emp_puesto_cod">Puesto del Empleado</label>
-                        <input type="number" step="1" min="1" name="emp_puesto_cod" id="emp_puesto_cod" class="form-control" value="<?= $empleados[0]['EMP_PUESTO_COD'] ?>">
+                        <select name="emp_puesto_cod" id="emp_puesto_cod" class="form-control">
+                        <option value="">Seleccione</option>
+                        <?php foreach ($puestos as $key => $puesto) : ?>
+                            <option value="<?= $puesto['PUE_COD'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
+                        <?php endforeach ?>
+                    </select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="emp_sex_cod">Sexo del Empleado</label>
-                        <input type="number" step="1" min="1" max="2" name="emp_sex_cod" id="emp_sex_cod" class="form-control" value="<?= $empleados[0]['EMP_SEX_COD'] ?>">
+                        <select name="emp_sexo" id="emp_sexo" class="form-control">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="emp_area_cod">Area Asignada</label>
-                        <input type="number" step="1" min="1" name="emp_area_cod" id="emp_area_cod" class="form-control" value="<?= $empleados[0]['EMP_AREA_COD'] ?>">
+                        <select name="emp_area_cod" id="emp_area_cod" class="form-control">
+                        <option value="">Seleccione</option>
+                        <?php foreach ($areas as $key => $area) : ?>
+                            <option value="<?= $area['AREA_COD'] ?>"><?= $area['AREA_DESCR'] ?></option>
+                        <?php endforeach ?>
+                    </select>
                     </div>
                 </div>
                 <div class="row mb-3">

@@ -2,7 +2,7 @@
 require '../../modelos/puestos.php';
 
 
-if($_POST['pue_descr'] != '' && $_POST['pue_suel']  != '' && $_POST['pue_cod'] != ''){
+if($_POST['pue_descr'] != '' && $_POST['pue_suel']  != ''){
 
 
 

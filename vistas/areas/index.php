@@ -6,7 +6,7 @@
             <form action="/final/controladores/areas/guardar.php" method="POST" class="col-lg-8 border bg-light p-3">
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="producto_nombre">Descripcion del Area</label>
+                        <label for="area_descr">Descripcion del Area</label>
                         <input type="text" name="area_descr" id="area_descr" class="form-control">
                     </div>
                 </div>

@@ -1,3 +1,19 @@
+<?php
+require_once '../../modelos/Puestos.php';
+require_once '../../modelos/Area.php';
+
+try {
+    $area = new Area();
+    $areas = $area->buscar();
+    $puesto = new Puesto();
+    $puestos = $puesto->buscar();
+} catch (PDOException $e) {
+    $error = $e->getMessage();
+} catch (Exception $e2) {
+    $error = $e2->getMessage();
+}
+?>
+
 <?php include_once '../../includes/header.php'?>
 <?php include_once '../../includes/navbar.php'?>
     <div class="container">
@@ -31,19 +47,32 @@
                 <div class="row mb-3">
                     <div class="col">
                         <label for="emp_puesto_cod">Puesto del Empleado</label>
-                        <input type="number" step="1" min="1" name="emp_puesto_cod" id="emp_puesto_cod" class="form-control">
+                        <select name="emp_puesto_cod" id="emp_puesto_cod" class="form-control">
+                        <option value="">Seleccione</option>
+                        <?php foreach ($puestos as $key => $puesto) : ?>
+                            <option value="<?= $puesto['PUE_COD'] ?>"><?= $puesto['PUE_DESCR'] ?></option>
+                        <?php endforeach ?>
+                    </select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="emp_sex_cod">Sexo del Empleado</label>
-                        <input type="number" step="1" min="1" max="2" name="emp_sex_cod" id="emp_sex_cod" class="form-control">
+                        <select name="emp_sexo" id="emp_sexo" class="form-control">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="emp_area_cod">Area Asignada</label>
-                        <input type="number" step="1" min="1" name="emp_area_cod" id="emp_area_cod" class="form-control">
+                        <select name="emp_area_cod" id="emp_area_cod" class="form-control">
+                        <option value="">SELECCIONE...</option>
+                        <?php foreach ($areas as $key => $area) : ?>
+                            <option value="<?= $area['AREA_COD'] ?>"><?= $area['AREA_DESCR'] ?></option>
+                        <?php endforeach ?>
+                    </select>
                     </div>
                 </div>
                 <div class="row mb-3">
