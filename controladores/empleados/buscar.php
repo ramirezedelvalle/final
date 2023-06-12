@@ -67,7 +67,7 @@ try {
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/final/vistas/empleados/buscar.php" class="btn btn-info w-100">Atrás</a>
+                <a href="/final/vistas/empleados/buscar.php" class="btn btn-primary w-100">Atrás</a>
             </div>
         </div>
     </div>

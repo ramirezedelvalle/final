@@ -52,7 +52,7 @@ if($_POST['area_descr'] != ''){
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final/vistas/areas/index.php" class="btn btn-info">Atrás</a>
+                <a href="/final/vistas/areas/index.php" class="btn btn-primary">Atrás</a>
             </div>
         </div>
     </div>

@@ -54,7 +54,7 @@ if($_POST['pue_descr'] != '' && $_POST['pue_suel']  != ''){
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final/controladores/puestos/buscar.php?pue_descr=<?= $_POST['pue_descr'] ?>" class="btn btn-info">Volver al formulario</a>
+                <a href="/final/controladores/puestos/buscar.php?pue_descr=<?= $_POST['pue_descr'] ?>" class="btn btn-primary">Volver al formulario</a>
             </div>
         </div>
     </div>

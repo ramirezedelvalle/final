@@ -54,7 +54,7 @@ if($_POST['pue_descr'] != '' && $_POST['pue_suel'] != ''){
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final/vistas/puestos/index.php" class="btn btn-info">Atrás</a>
+                <a href="/final/vistas/puestos/index.php" class="btn btn-primary">Atrás</a>
             </div>
         </div>
     </div>

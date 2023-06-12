@@ -86,7 +86,7 @@ require '../../modelos/puestos.php';
 
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/practica9/vistas/ventas/buscar.php" class="btn btn-info w-100">Volver al formulario</a>
+                <a href="/practica9/vistas/ventas/buscar.php" class="btn btn-primary w-100">Volver al formulario</a>
             </div>
         </div>
     </div>

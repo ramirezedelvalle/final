@@ -54,7 +54,7 @@ if($_POST['area_descr'] != '' && $_POST['area_cod'] != ''){
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final/controladores/areas/buscar.php?area_descr=<?= $_POST['area_descr'] ?>" class="btn btn-info">Volver al formulario</a>
+                <a href="/final/controladores/areas/buscar.php?area_descr=<?= $_POST['area_descr'] ?>" class="btn btn-primary">Volver al formulario</a>
             </div>
         </div>
     </div>

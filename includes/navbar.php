@@ -24,19 +24,6 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Empleados
-                    </a>
-                    <ul class="dropdown-menu bg-dark">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/final/vistas/empleados/index.php">Registrar Empleado</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/final/vistas/empleados/buscar.php">Buscar Empleado</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Puesto
                     </a>
                     <ul class="dropdown-menu bg-dark">
@@ -45,6 +32,19 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/final/vistas/puestos/buscar.php">Buscar Puesto</a>
+                        </li>
+                    </ul>
+                </li>                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Empleados
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final/vistas/empleados/index.php">Registrar Empleado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/final/vistas/empleados/buscar.php">Buscar Empleado</a>
                         </li>
                     </ul>
                 </li>

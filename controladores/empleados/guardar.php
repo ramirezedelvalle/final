@@ -53,7 +53,7 @@ if($_POST['emp_nom'] != '' && $_POST['emp_ape'] != '' && $_POST['emp_dpi'] != ''
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final/vistas/empleados/index.php" class="btn btn-info">Atrás</a>
+                <a href="/final/vistas/empleados/index.php" class="btn btn-primary">Atrás</a>
             </div>
         </div>
     </div>

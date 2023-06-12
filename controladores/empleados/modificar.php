@@ -54,7 +54,7 @@ if($_POST['emp_nom'] != '' && $_POST['emp_ape'] != '' && $_POST['emp_dpi'] != ''
         </div>
         <div class="row">
             <div class="col-lg-4">
-                <a href="/final/controladores/empleados/buscar.php?emp_nom=<?= $_POST['emp_nom'] ?>" class="btn btn-info">Volver al formulario</a>
+                <a href="/final/controladores/empleados/buscar.php?emp_nom=<?= $_POST['emp_nom'] ?>" class="btn btn-primary">Volver al formulario</a>
             </div>
         </div>
     </div>

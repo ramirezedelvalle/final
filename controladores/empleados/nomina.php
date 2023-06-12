@@ -24,6 +24,16 @@ try {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Resultados</title>
 </head>
+<style>
+    .container{
+        padding: 5rem;
+        padding-top: 5rem;
+    }
+
+    table{
+        background-color: white;
+    }
+    </style>
 <body>
     <div class="container">
         <div class="row justify-content-center">
@@ -81,7 +91,7 @@ try {
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-4">
-                <a href="/final/vistas/empleados/buscar.php" class="btn btn-info w-100">Atrás</a>
+                <a href="/final/vistas/empleados/buscar.php" class="btn btn-primary w-100">Atrás</a>
             </div>
         </div>
     </div>
