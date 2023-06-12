@@ -31,7 +31,7 @@ CREATE TABLE puestos  (
 
 CREATE TABLE areas  ( 
 	area_cod	SERIAL NOT NULL,
-	area_nom	VARCHAR(200) NOT NULL,
+	area_descr	VARCHAR(200) NOT NULL,
     area_situacion CHAR (1) DEFAULT '1',
     PRIMARY KEY(area_cod)
 )
