@@ -64,7 +64,7 @@ require_once '../../modelos/areas.php';
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <label for="emp_sex_cod">Sexo del Empleado</label>
+                        <label for="emp_sexo">Sexo del Empleado</label>
                         <select name="emp_sexo" id="emp_sexo" class="form-control">
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>

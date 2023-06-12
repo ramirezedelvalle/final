@@ -50,7 +50,7 @@ try {
                             <td><?= $empleados['EMP_DPI'] ?></td>
                             <td><?= $empleados['EMP_EDAD'] ?></td>
                             <td><?= $empleados['EMP_PUESTO_COD'] ?></td>
-                            <td><?= $empleados['EMP_SEX_COD'] ?></td>
+                            <td><?= $empleados['EMP_SEXO'] ?></td>
                             <td><?= $empleados['EMP_AREA_COD'] ?></td>
                             <td><a class="btn btn-warning w-100" href="/final/vistas/empleados/modificar.php?emp_cod=<?= $empleados['EMP_COD']?>">Modificar</a></td>
                             <td><a class="btn btn-danger w-100" href="/final/controladores/empleados/eliminar.php?emp_cod=<?= $empleados['EMP_COD']?>">Eliminar</a></td>

@@ -8,7 +8,7 @@ class empleados extends Conexion{
     public $emp_dpi;
     public $emp_edad;
     public $emp_puesto_cod;
-    public $emp_sex_cod;
+    public $emp_sexo;
     public $emp_area_cod;
     public $emp_situacion;
 
@@ -21,14 +21,14 @@ class empleados extends Conexion{
         $this->emp_dpi = $args['emp_dpi'] ?? '';
         $this->emp_edad = $args['emp_edad'] ?? '';
         $this->emp_puesto_cod = $args['emp_puesto_cod'] ?? '';
-        $this->emp_sex_cod = $args['emp_sex_cod'] ?? '';
+        $this->emp_sexo = $args['emp_sexo'] ?? '';
         $this->emp_area_cod = $args['emp_area_cod'] ?? '';
         $this->emp_situacion = $args['emp_situacion'] ?? '';
     }
 
     public function guardar(){
-        $sql = "INSERT INTO empleados(emp_nom, emp_ape, emp_dpi, emp_edad, emp_puesto_cod, emp_sex_cod, emp_area_cod)
-        values('$this->emp_nom', '$this->emp_ape', '$this->emp_dpi', '$this->emp_edad', '$this->emp_puesto_cod', '$this->emp_sex_cod', '$this->emp_area_cod')";
+        $sql = "INSERT INTO empleados(emp_nom, emp_ape, emp_dpi, emp_edad, emp_puesto_cod, emp_sexo, emp_area_cod)
+        values('$this->emp_nom', '$this->emp_ape', '$this->emp_dpi', '$this->emp_edad', '$this->emp_puesto_cod', '$this->emp_sexo', '$this->emp_area_cod')";
         $resultado = self::ejecutar($sql);
         return $resultado;
     }
@@ -56,8 +56,8 @@ class empleados extends Conexion{
             $sql .= " and emp_puesto_cod = $this->emp_puesto_cod ";
         }
 
-        if($this->emp_sex_cod != ''){
-            $sql .= " and emp_sex_cod = $this->emp_sex_cod ";
+        if($this->emp_sexo != ''){
+            $sql .= " and emp_sexo = $this->emp_sexo ";
         }
 
         if($this->emp_area_cod != ''){
@@ -73,7 +73,7 @@ class empleados extends Conexion{
     }
 
     public function modificar(){
-        $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_ape = '$this->emp_ape', emp_dpi = $this->emp_dpi, emp_edad = $this->emp_edad, emp_puesto_cod = $this->emp_puesto_cod, emp_sex_cod = $this->emp_sex_cod, emp_area_cod = $this->emp_area_cod  where emp_cod = $this->emp_cod";
+        $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_ape = '$this->emp_ape', emp_dpi = $this->emp_dpi, emp_edad = $this->emp_edad, emp_puesto_cod = $this->emp_puesto_cod, emp_sexo = $this->emp_sexo, emp_area_cod = $this->emp_area_cod  where emp_cod = $this->emp_cod";
         
         $resultado = self::ejecutar($sql);
         return $resultado;
