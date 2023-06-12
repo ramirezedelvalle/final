@@ -72,6 +72,48 @@ class empleados extends Conexion{
         return $resultado;
     }
 
+    public function registro(){
+        $sql = "SELECT e.emp_cod, e.emp_nom, e.emp_ape, e.emp_dpi, p.pue_descr, e.emp_edad, a.area_descr,  e.emp_sexo, p.pue_suel
+        FROM empleados e
+        JOIN puestos p ON e.emp_puesto_cod = p.pue_cod
+        JOIN areas a ON e.emp_area_cod = a.area_cod";
+        ;
+
+        if($this->emp_nom != ''){
+            $sql .= " and emp_nom like '%$this->emp_nom%' ";
+        }
+
+        if($this->emp_ape != ''){
+            $sql .= " and emp_ape like '%$this->emp_ape%' ";
+        }
+
+        if($this->emp_dpi != ''){
+            $sql .= " and emp_dpi = $this->emp_dpi ";
+        }
+      
+        if($this->emp_puesto_cod != ''){
+            $sql .= " and emp_puesto_cod = $this->emp_puesto_cod ";
+        }
+
+        if($this->emp_edad != ''){
+            $sql .= " and emp_edad = $this->emp_edad ";
+        }
+
+        if($this->emp_sexo != ''){
+            $sql .= " and emp_sexo = $this->emp_sexo ";
+        }
+        if($this->emp_area_cod != ''){
+            $sql .= " and emp_area_cod = $this->emp_area_cod ";
+        }
+
+        if($this->emp_cod != null){
+            $sql .= " and emp_cod = $this->emp_cod ";
+        }
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
     public function modificar(){
         $sql = "UPDATE empleados SET emp_nom = '$this->emp_nom', emp_ape = '$this->emp_ape', emp_dpi = $this->emp_dpi, emp_edad = $this->emp_edad, emp_puesto_cod = $this->emp_puesto_cod, emp_sexo = $this->emp_sexo, emp_area_cod = $this->emp_area_cod  where emp_cod = $this->emp_cod";
         
