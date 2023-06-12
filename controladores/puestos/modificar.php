@@ -4,8 +4,6 @@ require '../../modelos/puestos.php';
 
 if($_POST['pue_descr'] != '' && $_POST['pue_suel']  != ''){
 
-
-
     try {
         $puesto = new puestos($_POST);
         $resultado = $puesto->modificar();
